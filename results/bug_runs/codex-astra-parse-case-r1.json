@@ -1,0 +1,30 @@
+{
+ "name": "codex-astra-parse-case-r1",
+ "key": "codex-astra",
+ "bug": "parse-case",
+ "lib": "parse",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 123.5,
+ "final_message": "Created `tests/test_agent.py` with 110 tests using only pytest and the standard library. Covers conversions, dates, padding, custom types, repeated fields, spans, and search behavior.\n\nRan the requested command: **110 passed**, with one Python deprecation warning for yearless date parsing. Library code is unchanged.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 110,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": []
+ },
+ "on_correct": {
+  "passed": 110,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

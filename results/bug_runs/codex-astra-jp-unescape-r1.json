@@ -1,0 +1,34 @@
+{
+ "name": "codex-astra-jp-unescape-r1",
+ "key": "codex-astra",
+ "bug": "jp-unescape",
+ "lib": "jsonpointer",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 101.7,
+ "final_message": "Created `tests/test_agent.py` using only pytest and the standard library. Library code is unchanged.\n\nRan the requested command: **93 passed, 1 xfailed**. The strict expected-failure test documents an existing bug: `~01` incorrectly decodes to `/` instead of `~1`.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 93,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 1,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": [
+   "XFAIL tests/test_agent.py::test_escaped_tilde_followed_by_one_is_not_a_slash - unescape decodes ~0 before ~1, decoding ~01 twice"
+  ]
+ },
+ "on_correct": {
+  "passed": 93,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [
+   "tests/test_agent.py::test_escaped_tilde_followed_by_one_is_not_a_slash"
+  ],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

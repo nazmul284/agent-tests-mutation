@@ -1,0 +1,21 @@
+{
+ "name": "codex-astra-isodate-plainclean-r1",
+ "agent": "codex",
+ "model": "gpt-6-astra",
+ "key": "codex-astra",
+ "lib": "isodate",
+ "prompt": "plainclean",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 140.5,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 203040,
+  "cached_input_tokens": 175616,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 5392,
+  "reasoning_output_tokens": 28
+ }
+}

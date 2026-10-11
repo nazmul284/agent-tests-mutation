@@ -1,0 +1,21 @@
+{
+ "name": "codex-sol-parse-plainclean-r1",
+ "agent": "codex",
+ "model": "gpt-5.6-sol",
+ "key": "codex-sol",
+ "lib": "parse",
+ "prompt": "plainclean",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 76.5,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 364099,
+  "cached_input_tokens": 334336,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 5195,
+  "reasoning_output_tokens": 427
+ }
+}

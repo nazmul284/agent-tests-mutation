@@ -1,0 +1,44 @@
+{
+ "name": "codex-astra-jp-leading-zero-r1",
+ "key": "codex-astra",
+ "bug": "jp-leading-zero",
+ "lib": "jsonpointer",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 91.6,
+ "final_message": "Created [tests/test_agent.py](tests/test_agent.py) covering resolution, escaping, mutation, copying, errors, and pointer operations.\n\nRan the requested command: **104 passed, 6 expected failures**. The strict expected failures expose the existing leading-zero array-index bug. Library code is unchanged.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 104,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 6,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": [
+   "XFAIL tests/test_agent.py::test_array_indices_reject_leading_zeros[resolve-00] - Known bug: array index validation accepts leading zeros",
+   "XFAIL tests/test_agent.py::test_array_indices_reject_leading_zeros[resolve-01] - Known bug: array index validation accepts leading zeros",
+   "XFAIL tests/test_agent.py::test_array_indices_reject_leading_zeros[resolve-000] - Known bug: array index validation accepts leading zeros",
+   "XFAIL tests/test_agent.py::test_array_indices_reject_leading_zeros[set-00] - Known bug: array index validation accepts leading zeros",
+   "XFAIL tests/test_agent.py::test_array_indices_reject_leading_zeros[set-01] - Known bug: array index validation accepts leading zeros",
+   "XFAIL tests/test_agent.py::test_array_indices_reject_leading_zeros[set-000] - Known bug: array index validation accepts leading zeros"
+  ]
+ },
+ "on_correct": {
+  "passed": 104,
+  "failed": 6,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [
+   "tests/test_agent.py::test_array_indices_reject_leading_zeros[resolve-00]",
+   "tests/test_agent.py::test_array_indices_reject_leading_zeros[resolve-01]",
+   "tests/test_agent.py::test_array_indices_reject_leading_zeros[resolve-000]",
+   "tests/test_agent.py::test_array_indices_reject_leading_zeros[set-00]",
+   "tests/test_agent.py::test_array_indices_reject_leading_zeros[set-01]",
+   "tests/test_agent.py::test_array_indices_reject_leading_zeros[set-000]"
+  ],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

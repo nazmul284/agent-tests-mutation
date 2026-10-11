@@ -1,0 +1,34 @@
+{
+ "name": "claude-sonnet-parse-case-r2",
+ "key": "claude-sonnet",
+ "bug": "parse-case",
+ "lib": "parse",
+ "rep": 2,
+ "rc": 0,
+ "wall_s": 122.9,
+ "final_message": "I wrote `tests/test_agent.py` with 82 tests. The run gives 81 passed and 1 xfailed, so the suite is green only because of that one xfail. The library code is unchanged.\n\n**One library bug found:** `parse()` in `parse/__init__.py:947` defaults to `case_sensitive=True`. Its own docstring says matching is case-insensitive by default, and `search`, `findall` and `compile` all default to `False`. So `parse.parse(\"SPAM {}\", \"spam x\")` returns `None` when it should match. I marked `test_parse_case_insensitive_default` as `xfail(strict=True)` so the suite passes. Once the default is fixed to `False`, the strict xfail will fail and show you to remove the marker.\n\nPytest also emitted one `DeprecationWarning` from `strptime` for formats without a year. It doesn't affect the results.\n\n**What the tests cover:**\n- `parse`, `search`, `findall` and `compile`, including `pos`/`endpos`, `evaluate_result=False` and case sensitivity.\n- Escaping of literal text and `{{` / `}}`.\n- Every field type: `d n b o x X f F e E g G %`, `w W s S D l`, the `t*` date/time types and strptime-style formats.\n- Width, precision, fill, alignment, sign and grouping.\n- Named fields with dotted names, indexed names and name collisions.\n- Repeated names (back-references and the `RepeatedNameError` mismatch case).\n- Result spans and field-index bookkeeping.\n- Custom types through `extra_types` and `with_pattern`, including `regex_group_count`.\n- Timezone handling and the `int_convert` / `percentage` helpers.\n- `extract_format` and the reprs.\n\nI left out a `TooManyFields` test because that limit doesn't exist on this Python.\n\nRunning the tests created a `parse/__pycache__/` directory, which now shows as untracked in git.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 81,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 1,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": [
+   "XFAIL tests/test_agent.py::test_parse_case_insensitive_default - library bug: parse() defaults to case_sensitive=True, but the docstring (and search/findall/compile) default to case-insensitive"
+  ]
+ },
+ "on_correct": {
+  "passed": 81,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [
+   "tests/test_agent.py::test_parse_case_insensitive_default"
+  ],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

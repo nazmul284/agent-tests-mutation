@@ -1,0 +1,17 @@
+{
+ "name": "claude-sonnet-parse-plain-r1",
+ "agent": "claude",
+ "model": "claude-sonnet-5-5",
+ "key": "claude-sonnet",
+ "lib": "parse",
+ "prompt": "plain",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 150.7,
+ "changed": [
+  "?? parse/__pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 0.510577,
+ "turns": 11
+}

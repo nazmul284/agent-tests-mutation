@@ -1,0 +1,485 @@
+{
+ "claude-opus-isodate-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 427,
+  "shared_lines": 6,
+  "agent_literals": 143,
+  "shared_literals": 29
+ },
+ "claude-opus-isodate-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 545,
+  "shared_lines": 6,
+  "agent_literals": 172,
+  "shared_literals": 24
+ },
+ "claude-opus-isodate-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 483,
+  "shared_lines": 6,
+  "agent_literals": 203,
+  "shared_literals": 43
+ },
+ "claude-opus-isodate-plain-r2": {
+  "net_hits": [],
+  "agent_lines": 537,
+  "shared_lines": 6,
+  "agent_literals": 197,
+  "shared_literals": 36
+ },
+ "claude-opus-isodate-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 344,
+  "shared_lines": 7,
+  "agent_literals": 126,
+  "shared_literals": 25
+ },
+ "claude-opus-isodate-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 374,
+  "shared_lines": 6,
+  "agent_literals": 147,
+  "shared_literals": 14
+ },
+ "claude-opus-jsonpointer-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 133,
+  "shared_lines": 1,
+  "agent_literals": 33,
+  "shared_literals": 0
+ },
+ "claude-opus-jsonpointer-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 106,
+  "shared_lines": 0,
+  "agent_literals": 36,
+  "shared_literals": 1
+ },
+ "claude-opus-jsonpointer-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 156,
+  "shared_lines": 1,
+  "agent_literals": 32,
+  "shared_literals": 2
+ },
+ "claude-opus-jsonpointer-plain-r2": {
+  "net_hits": [],
+  "agent_lines": 188,
+  "shared_lines": 0,
+  "agent_literals": 43,
+  "shared_literals": 2
+ },
+ "claude-opus-jsonpointer-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 179,
+  "shared_lines": 0,
+  "agent_literals": 43,
+  "shared_literals": 2
+ },
+ "claude-opus-jsonpointer-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 161,
+  "shared_lines": 0,
+  "agent_literals": 39,
+  "shared_literals": 1
+ },
+ "claude-opus-parse-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 468,
+  "shared_lines": 2,
+  "agent_literals": 212,
+  "shared_literals": 9
+ },
+ "claude-opus-parse-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 602,
+  "shared_lines": 2,
+  "agent_literals": 222,
+  "shared_literals": 12
+ },
+ "claude-opus-parse-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 401,
+  "shared_lines": 7,
+  "agent_literals": 193,
+  "shared_literals": 14
+ },
+ "claude-opus-parse-plain-r2": {
+  "net_hits": [],
+  "agent_lines": 467,
+  "shared_lines": 4,
+  "agent_literals": 217,
+  "shared_literals": 8
+ },
+ "claude-opus-parse-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 364,
+  "shared_lines": 5,
+  "agent_literals": 197,
+  "shared_literals": 16
+ },
+ "claude-opus-parse-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 320,
+  "shared_lines": 5,
+  "agent_literals": 148,
+  "shared_literals": 9
+ },
+ "claude-sonnet-isodate-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 602,
+  "shared_lines": 4,
+  "agent_literals": 191,
+  "shared_literals": 8
+ },
+ "claude-sonnet-isodate-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 617,
+  "shared_lines": 4,
+  "agent_literals": 194,
+  "shared_literals": 5
+ },
+ "claude-sonnet-isodate-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 386,
+  "shared_lines": 6,
+  "agent_literals": 150,
+  "shared_literals": 15
+ },
+ "claude-sonnet-isodate-plain-r2": {
+  "net_hits": [],
+  "agent_lines": 410,
+  "shared_lines": 7,
+  "agent_literals": 143,
+  "shared_literals": 12
+ },
+ "claude-sonnet-isodate-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 432,
+  "shared_lines": 5,
+  "agent_literals": 162,
+  "shared_literals": 2
+ },
+ "claude-sonnet-isodate-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 415,
+  "shared_lines": 4,
+  "agent_literals": 156,
+  "shared_literals": 13
+ },
+ "claude-sonnet-jsonpointer-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 178,
+  "shared_lines": 0,
+  "agent_literals": 39,
+  "shared_literals": 1
+ },
+ "claude-sonnet-jsonpointer-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 178,
+  "shared_lines": 0,
+  "agent_literals": 30,
+  "shared_literals": 2
+ },
+ "claude-sonnet-jsonpointer-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 169,
+  "shared_lines": 0,
+  "agent_literals": 12,
+  "shared_literals": 1
+ },
+ "claude-sonnet-jsonpointer-plain-r2": {
+  "net_hits": [],
+  "agent_lines": 123,
+  "shared_lines": 0,
+  "agent_literals": 14,
+  "shared_literals": 0
+ },
+ "claude-sonnet-jsonpointer-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 155,
+  "shared_lines": 0,
+  "agent_literals": 15,
+  "shared_literals": 2
+ },
+ "claude-sonnet-jsonpointer-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 108,
+  "shared_lines": 0,
+  "agent_literals": 11,
+  "shared_literals": 2
+ },
+ "claude-sonnet-parse-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 624,
+  "shared_lines": 1,
+  "agent_literals": 252,
+  "shared_literals": 4
+ },
+ "claude-sonnet-parse-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 863,
+  "shared_lines": 3,
+  "agent_literals": 263,
+  "shared_literals": 12
+ },
+ "claude-sonnet-parse-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 373,
+  "shared_lines": 1,
+  "agent_literals": 164,
+  "shared_literals": 2
+ },
+ "claude-sonnet-parse-plain-r2": {
+  "net_hits": [],
+  "agent_lines": 455,
+  "shared_lines": 2,
+  "agent_literals": 166,
+  "shared_literals": 3
+ },
+ "claude-sonnet-parse-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 336,
+  "shared_lines": 2,
+  "agent_literals": 145,
+  "shared_literals": 0
+ },
+ "claude-sonnet-parse-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 314,
+  "shared_lines": 4,
+  "agent_literals": 145,
+  "shared_literals": 4
+ },
+ "codex-astra-isodate-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 286,
+  "shared_lines": 1,
+  "agent_literals": 132,
+  "shared_literals": 3
+ },
+ "codex-astra-isodate-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 197,
+  "shared_lines": 1,
+  "agent_literals": 111,
+  "shared_literals": 3
+ },
+ "codex-astra-isodate-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 170,
+  "shared_lines": 1,
+  "agent_literals": 66,
+  "shared_literals": 0
+ },
+ "codex-astra-isodate-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 161,
+  "shared_lines": 1,
+  "agent_literals": 71,
+  "shared_literals": 0
+ },
+ "codex-astra-isodate-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 159,
+  "shared_lines": 1,
+  "agent_literals": 69,
+  "shared_literals": 0
+ },
+ "codex-astra-jsonpointer-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 134,
+  "shared_lines": 0,
+  "agent_literals": 48,
+  "shared_literals": 1
+ },
+ "codex-astra-jsonpointer-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 84,
+  "shared_lines": 0,
+  "agent_literals": 29,
+  "shared_literals": 0
+ },
+ "codex-astra-jsonpointer-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 115,
+  "shared_lines": 0,
+  "agent_literals": 31,
+  "shared_literals": 0
+ },
+ "codex-astra-jsonpointer-plain-r2": {
+  "net_hits": [],
+  "agent_lines": 106,
+  "shared_lines": 0,
+  "agent_literals": 29,
+  "shared_literals": 0
+ },
+ "codex-astra-jsonpointer-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 105,
+  "shared_lines": 0,
+  "agent_literals": 34,
+  "shared_literals": 0
+ },
+ "codex-astra-jsonpointer-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 103,
+  "shared_lines": 0,
+  "agent_literals": 25,
+  "shared_literals": 0
+ },
+ "codex-astra-parse-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 159,
+  "shared_lines": 2,
+  "agent_literals": 79,
+  "shared_literals": 1
+ },
+ "codex-astra-parse-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 210,
+  "shared_lines": 1,
+  "agent_literals": 99,
+  "shared_literals": 1
+ },
+ "codex-astra-parse-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 138,
+  "shared_lines": 2,
+  "agent_literals": 59,
+  "shared_literals": 0
+ },
+ "codex-astra-parse-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 146,
+  "shared_lines": 2,
+  "agent_literals": 61,
+  "shared_literals": 0
+ },
+ "codex-astra-parse-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 159,
+  "shared_lines": 2,
+  "agent_literals": 69,
+  "shared_literals": 1
+ },
+ "codex-sol-isodate-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 118,
+  "shared_lines": 2,
+  "agent_literals": 55,
+  "shared_literals": 0
+ },
+ "codex-sol-isodate-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 124,
+  "shared_lines": 2,
+  "agent_literals": 45,
+  "shared_literals": 0
+ },
+ "codex-sol-isodate-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 94,
+  "shared_lines": 2,
+  "agent_literals": 41,
+  "shared_literals": 0
+ },
+ "codex-sol-isodate-plain-r2": {
+  "net_hits": [],
+  "agent_lines": 101,
+  "shared_lines": 2,
+  "agent_literals": 45,
+  "shared_literals": 0
+ },
+ "codex-sol-isodate-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 74,
+  "shared_lines": 2,
+  "agent_literals": 33,
+  "shared_literals": 0
+ },
+ "codex-sol-isodate-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 87,
+  "shared_lines": 1,
+  "agent_literals": 37,
+  "shared_literals": 0
+ },
+ "codex-sol-jsonpointer-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 90,
+  "shared_lines": 0,
+  "agent_literals": 40,
+  "shared_literals": 0
+ },
+ "codex-sol-jsonpointer-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 77,
+  "shared_lines": 0,
+  "agent_literals": 27,
+  "shared_literals": 0
+ },
+ "codex-sol-jsonpointer-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 81,
+  "shared_lines": 0,
+  "agent_literals": 35,
+  "shared_literals": 0
+ },
+ "codex-sol-jsonpointer-plain-r2": {
+  "net_hits": [],
+  "agent_lines": 76,
+  "shared_lines": 0,
+  "agent_literals": 37,
+  "shared_literals": 0
+ },
+ "codex-sol-jsonpointer-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 63,
+  "shared_lines": 0,
+  "agent_literals": 24,
+  "shared_literals": 0
+ },
+ "codex-sol-jsonpointer-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 62,
+  "shared_lines": 0,
+  "agent_literals": 31,
+  "shared_literals": 0
+ },
+ "codex-sol-parse-mutation-r1": {
+  "net_hits": [],
+  "agent_lines": 106,
+  "shared_lines": 1,
+  "agent_literals": 54,
+  "shared_literals": 0
+ },
+ "codex-sol-parse-mutation-r2": {
+  "net_hits": [],
+  "agent_lines": 115,
+  "shared_lines": 0,
+  "agent_literals": 54,
+  "shared_literals": 0
+ },
+ "codex-sol-parse-plain-r1": {
+  "net_hits": [],
+  "agent_lines": 97,
+  "shared_lines": 1,
+  "agent_literals": 52,
+  "shared_literals": 1
+ },
+ "codex-sol-parse-plainclean-r1": {
+  "net_hits": [],
+  "agent_lines": 70,
+  "shared_lines": 1,
+  "agent_literals": 53,
+  "shared_literals": 1
+ },
+ "codex-sol-parse-plainclean-r2": {
+  "net_hits": [],
+  "agent_lines": 98,
+  "shared_lines": 1,
+  "agent_literals": 62,
+  "shared_literals": 0
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "name": "codex-astra-isodate-mutation-r1",
+ "agent": "codex",
+ "model": "gpt-6-astra",
+ "key": "codex-astra",
+ "lib": "isodate",
+ "prompt": "mutation",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 230.7,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 281951,
+  "cached_input_tokens": 254336,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 9225,
+  "reasoning_output_tokens": 179
+ }
+}

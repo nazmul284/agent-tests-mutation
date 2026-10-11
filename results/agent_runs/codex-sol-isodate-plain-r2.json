@@ -1,0 +1,21 @@
+{
+ "name": "codex-sol-isodate-plain-r2",
+ "agent": "codex",
+ "model": "gpt-5.6-sol",
+ "key": "codex-sol",
+ "lib": "isodate",
+ "prompt": "plain",
+ "rep": 2,
+ "rc": 0,
+ "wall_s": 101.1,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 333220,
+  "cached_input_tokens": 302976,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 6184,
+  "reasoning_output_tokens": 458
+ }
+}

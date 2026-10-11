@@ -1,0 +1,22 @@
+{
+ "name": "codex-astra-isodate-plain-r1",
+ "agent": "codex",
+ "model": "gpt-6-astra",
+ "key": "codex-astra",
+ "lib": "isodate",
+ "prompt": "plain",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 159.3,
+ "changed": [
+  "?? isodate/__pycache__/",
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 174623,
+  "cached_input_tokens": 140032,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 5906,
+  "reasoning_output_tokens": 28
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "name": "codex-astra-jsonpointer-mutation-r1",
+ "agent": "codex",
+ "model": "gpt-6-astra",
+ "key": "codex-astra",
+ "lib": "jsonpointer",
+ "prompt": "mutation",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 132.7,
+ "changed": [
+  "?? __pycache__/",
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 105883,
+  "cached_input_tokens": 91008,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 4550,
+  "reasoning_output_tokens": 98
+ }
+}

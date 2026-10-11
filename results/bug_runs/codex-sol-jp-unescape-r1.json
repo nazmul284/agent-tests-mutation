@@ -1,0 +1,34 @@
+{
+ "name": "codex-sol-jp-unescape-r1",
+ "key": "codex-sol",
+ "bug": "jp-unescape",
+ "lib": "jsonpointer",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 76.7,
+ "final_message": "Created [tests/test_agent.py](<work>/bug_ws/codex-sol-jp-unescape-r1/tests/test_agent.py).\n\nCoverage includes RFC examples, escaping, invalid syntax and indices, defaults, mutation/copy behavior, list appends, root replacement, pointer composition, representations, custom indexables, and error handling.\n\nExact test command result:\n\n```text\n45 passed, 1 xfailed in 0.06s\n```\n\nThe expected failure documents the existing RFC 6901 double-unescape bug without modifying library code.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 45,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 1,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": [
+   "XFAIL tests/test_agent.py::test_unescape_does_not_process_an_escape_twice - known RFC 6901 bug: replacement must not decode the newly formed '~1'"
+  ]
+ },
+ "on_correct": {
+  "passed": 46,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": [
+   "XPASS tests/test_agent.py::test_unescape_does_not_process_an_escape_twice - known RFC 6901 bug: replacement must not decode the newly formed '~1'"
+  ]
+ }
+}

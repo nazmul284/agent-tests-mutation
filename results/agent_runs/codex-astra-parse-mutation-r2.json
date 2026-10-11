@@ -1,0 +1,22 @@
+{
+ "name": "codex-astra-parse-mutation-r2",
+ "agent": "codex",
+ "model": "gpt-6-astra",
+ "key": "codex-astra",
+ "lib": "parse",
+ "prompt": "mutation",
+ "rep": 2,
+ "rc": 0,
+ "wall_s": 185.4,
+ "changed": [
+  "?? parse/__pycache__/",
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 234950,
+  "cached_input_tokens": 192896,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 7062,
+  "reasoning_output_tokens": 59
+ }
+}

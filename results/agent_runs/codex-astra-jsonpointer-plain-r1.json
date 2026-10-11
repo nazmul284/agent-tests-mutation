@@ -1,0 +1,22 @@
+{
+ "name": "codex-astra-jsonpointer-plain-r1",
+ "agent": "codex",
+ "model": "gpt-6-astra",
+ "key": "codex-astra",
+ "lib": "jsonpointer",
+ "prompt": "plain",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 105.1,
+ "changed": [
+  "?? __pycache__/",
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 106073,
+  "cached_input_tokens": 67712,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 3427,
+  "reasoning_output_tokens": 21
+ }
+}

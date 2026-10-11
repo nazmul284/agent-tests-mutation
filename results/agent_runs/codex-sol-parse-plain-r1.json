@@ -1,0 +1,21 @@
+{
+ "name": "codex-sol-parse-plain-r1",
+ "agent": "codex",
+ "model": "gpt-5.6-sol",
+ "key": "codex-sol",
+ "lib": "parse",
+ "prompt": "plain",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 136.1,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 434358,
+  "cached_input_tokens": 399488,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 6145,
+  "reasoning_output_tokens": 440
+ }
+}

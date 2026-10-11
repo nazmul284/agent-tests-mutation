@@ -1,0 +1,46 @@
+{
+ "name": "claude-opus-parse-percent-r2",
+ "key": "claude-opus",
+ "bug": "parse-percent",
+ "lib": "parse",
+ "rep": 2,
+ "rc": 0,
+ "wall_s": 201.4,
+ "final_message": "I wrote `tests/test_agent.py`, and it found a real bug in the library: **`{:%}` gives results 10 times too large.** `parse.parse(\"{:%}\", \"50%\")` returns `5.0` instead of `0.5`. The cause is `percentage()` at `parse/__init__.py:114`, which divides by `10.0` when it should divide by `100.0`.\n\nThe suite runs clean: **254 passed, 7 xfailed.** The 7 xfailed tests are the percentage checks, which assert the correct values. Since you said not to change the library, I marked them as expected failures with `xfail(strict=True)` and a note naming the bug. That way the suite passes and still reports the bug every run. Once the library is fixed they will start failing, which is the signal to remove the marker. If you'd rather the bug make the run fail outright, delete the `PERCENT_BUG` marker.\n\nWhat the suite covers:\n- **The main calls:** `parse`, `search`, `findall` and `compile`, including the `pos`/`endpos` options, case sensitivity, and getting a raw match object back instead of a result.\n- **Results:** reading values by position and by name, slices, `in` checks, the printed form, and the start/end position recorded for each value. This includes types that use extra internal groups (`g`, `n`, date types and custom patterns), where a miscount would point values at the wrong part of the string.\n- **Field names:** dotted, hyphenated and bracketed names (which build nested dictionaries), names that could clash with each other, and repeated names (both copies must match the same text, and giving them different types raises an error).\n- **Number types:** `d` with sign, `0x`/`0b`/`0o` prefixes, digit grouping and width limits, plus `n`, `b`, `o`, `x`/`X`, `f`/`F` (including `.0f`, nan and inf), `e` and `g`.\n- **Text types:** `w`, `W`, `s`, `S`, `D` and `l`.\n- **Padding and width:** alignment, fill characters (including ones that are special in regular expressions), the `=` alignment, and minimum/maximum widths.\n- **Format specs:** how `extract_format` splits a spec into its parts, plus a check that every allowed type compiles and unknown types are rejected.\n- **Custom types:** `extra_types` and `with_pattern`, including how a custom pattern's internal groups are counted.\n- **Dates and times:** every built-in date/time type, including AM/PM rules for 12 o'clock, time zone offsets and microseconds, plus `%Y-%m-%d`-style formats and `FixedTzOffset`.\n\nA few of my first guesses about how the library behaves were wrong, so I checked the real behaviour and corrected those tests. For example, a field with a width and no type keeps its padding as part of the value. The one remaining warning comes from Python's own date parsing (dates with no year), not from these tests.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 254,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 7,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": [
+   "XFAIL tests/test_agent.py::test_percentage_type[50%-0.5] - library bug: parse.percentage divides by 10 instead of 100 ('50%' parses as 5.0, should be 0.5)",
+   "XFAIL tests/test_agent.py::test_percentage_type[100%-1.0] - library bug: parse.percentage divides by 10 instead of 100 ('50%' parses as 5.0, should be 0.5)",
+   "XFAIL tests/test_agent.py::test_percentage_type[12.5%-0.125] - library bug: parse.percentage divides by 10 instead of 100 ('50%' parses as 5.0, should be 0.5)",
+   "XFAIL tests/test_agent.py::test_percentage_type[200%-2.0] - library bug: parse.percentage divides by 10 instead of 100 ('50%' parses as 5.0, should be 0.5)",
+   "XFAIL tests/test_agent.py::test_percentage_type[-25%--0.25] - library bug: parse.percentage divides by 10 instead of 100 ('50%' parses as 5.0, should be 0.5)",
+   "XFAIL tests/test_agent.py::test_percentage_followed_by_field - library bug: parse.percentage divides by 10 instead of 100 ('50%' parses as 5.0, should be 0.5)",
+   "XFAIL tests/test_agent.py::test_percentage_function_direct - library bug: parse.percentage divides by 10 instead of 100 ('50%' parses as 5.0, should be 0.5)"
+  ]
+ },
+ "on_correct": {
+  "passed": 254,
+  "failed": 7,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [
+   "tests/test_agent.py::test_percentage_type[50%-0.5]",
+   "tests/test_agent.py::test_percentage_type[100%-1.0]",
+   "tests/test_agent.py::test_percentage_type[12.5%-0.125]",
+   "tests/test_agent.py::test_percentage_type[200%-2.0]",
+   "tests/test_agent.py::test_percentage_type[-25%--0.25]",
+   "tests/test_agent.py::test_percentage_followed_by_field",
+   "tests/test_agent.py::test_percentage_function_direct"
+  ],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

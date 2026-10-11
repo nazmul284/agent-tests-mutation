@@ -1,0 +1,21 @@
+{
+ "name": "codex-sol-jsonpointer-plainclean-r1",
+ "agent": "codex",
+ "model": "gpt-5.6-sol",
+ "key": "codex-sol",
+ "lib": "jsonpointer",
+ "prompt": "plainclean",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 66.7,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 200317,
+  "cached_input_tokens": 187136,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 4062,
+  "reasoning_output_tokens": 277
+ }
+}

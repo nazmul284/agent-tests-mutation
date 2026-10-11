@@ -1,0 +1,17 @@
+{
+ "name": "claude-opus-parse-plainclean-r1",
+ "agent": "claude",
+ "model": "claude-opus-5-5",
+ "key": "claude-opus",
+ "lib": "parse",
+ "prompt": "plainclean",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 296.7,
+ "changed": [
+  "?? parse/__pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 1.2281806,
+ "turns": 15
+}

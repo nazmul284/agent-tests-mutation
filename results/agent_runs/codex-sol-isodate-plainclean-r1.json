@@ -1,0 +1,21 @@
+{
+ "name": "codex-sol-isodate-plainclean-r1",
+ "agent": "codex",
+ "model": "gpt-5.6-sol",
+ "key": "codex-sol",
+ "lib": "isodate",
+ "prompt": "plainclean",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 133.5,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 364087,
+  "cached_input_tokens": 335744,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 5759,
+  "reasoning_output_tokens": 426
+ }
+}

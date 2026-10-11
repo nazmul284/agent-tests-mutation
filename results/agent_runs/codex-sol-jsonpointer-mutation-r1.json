@@ -1,0 +1,21 @@
+{
+ "name": "codex-sol-jsonpointer-mutation-r1",
+ "agent": "codex",
+ "model": "gpt-5.6-sol",
+ "key": "codex-sol",
+ "lib": "jsonpointer",
+ "prompt": "mutation",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 101.6,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 277930,
+  "cached_input_tokens": 259712,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 6048,
+  "reasoning_output_tokens": 591
+ }
+}

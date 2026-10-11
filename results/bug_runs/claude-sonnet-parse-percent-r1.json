@@ -1,0 +1,32 @@
+{
+ "name": "claude-sonnet-parse-percent-r1",
+ "key": "claude-sonnet",
+ "bug": "parse-percent",
+ "lib": "parse",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 92.2,
+ "final_message": "I wrote `tests/test_agent.py` with 70 tests. 69 pass and 1 fails, `test_percentage`, because the library has a real bug.\n\n**The bug:** `percentage()` in `parse/__init__.py:114` returns `float(string[:-1]) / 10.0`. It should divide by 100. `parse(\"{:%}\", \"50%\")[0]` gives `5.0` instead of `0.5`.\n\nI left that test failing on purpose. You asked me not to change the library, and an `xfail` or loosened assertion would hide the bug, so the suite fails until it's fixed. Changing that `10.0` to `100.0` should make all 70 tests pass.\n\nThe tests cover:\n- **Core parsing:** exact versus partial matching, case sensitivity, escaped braces, regex escaping, named, dotted and indexed fields, repeated names and spans.\n- **Field types:** integers, floats, decimals, percentages, extra types and `with_pattern`, and the width, precision and alignment handling.\n- **Search and dates:** `search` and `findall` (including `pos` and `endpos`), and the date/time types.\n\nThe dotted-name and string-alignment tests assert what the code actually does, for example `{a.b}` stays the flat key `\"a.b\"`.\n\nI also noticed that a fill character like `*` with `=` alignment, as in `{:*=5d}`, raises `NotImplementedError` because the fill isn't escaped. I left it untested.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 69,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [
+   "tests/test_agent.py::test_percentage"
+  ],
+  "collect_error": false,
+  "xfail_lines": []
+ },
+ "on_correct": {
+  "passed": 70,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

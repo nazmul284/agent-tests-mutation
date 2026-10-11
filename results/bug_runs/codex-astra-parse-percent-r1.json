@@ -1,0 +1,41 @@
+{
+ "name": "codex-astra-parse-percent-r1",
+ "key": "codex-astra",
+ "bug": "parse-percent",
+ "lib": "parse",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 173.4,
+ "final_message": "Created `tests/test_agent.py` using only pytest and the standard library. Library code is unchanged.\n\nRan the requested command: **138 passed, 4 xfailed**.\n\nStrict expected-failure tests document two existing bugs: incorrect percentage scaling and unescaped `*` fill with numeric `=` alignment.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 138,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 4,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": [
+   "XFAIL tests/test_agent.py::test_percentage_format_roundtrip[0.125] - Known defect: percentage() divides by 10 instead of 100",
+   "XFAIL tests/test_agent.py::test_percentage_format_roundtrip[-0.5] - Known defect: percentage() divides by 10 instead of 100",
+   "XFAIL tests/test_agent.py::test_percentage_format_roundtrip[1.0] - Known defect: percentage() divides by 10 instead of 100",
+   "XFAIL tests/test_agent.py::test_numeric_sign_alignment_with_literal_star_fill - Known defect: numeric = alignment does not escape regex fill characters"
+  ]
+ },
+ "on_correct": {
+  "passed": 138,
+  "failed": 3,
+  "errors": 0,
+  "skipped": 1,
+  "failed_ids": [
+   "tests/test_agent.py::test_percentage_format_roundtrip[0.125]",
+   "tests/test_agent.py::test_percentage_format_roundtrip[-0.5]",
+   "tests/test_agent.py::test_percentage_format_roundtrip[1.0]"
+  ],
+  "collect_error": false,
+  "xfail_lines": [
+   "XFAIL tests/test_agent.py::test_numeric_sign_alignment_with_literal_star_fill - Known defect: numeric = alignment does not escape regex fill characters"
+  ]
+ }
+}

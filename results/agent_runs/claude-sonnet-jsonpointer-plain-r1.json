@@ -1,0 +1,17 @@
+{
+ "name": "claude-sonnet-jsonpointer-plain-r1",
+ "agent": "claude",
+ "model": "claude-sonnet-5-5",
+ "key": "claude-sonnet",
+ "lib": "jsonpointer",
+ "prompt": "plain",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 70.3,
+ "changed": [
+  "?? __pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 0.21528839999999996,
+ "turns": 4
+}

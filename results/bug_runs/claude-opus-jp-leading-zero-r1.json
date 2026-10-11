@@ -1,0 +1,34 @@
+{
+ "name": "claude-opus-jp-leading-zero-r1",
+ "key": "claude-opus",
+ "bug": "jp-leading-zero",
+ "lib": "jsonpointer",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 79.0,
+ "final_message": "I wrote the suite in `tests/test_agent.py`, but it doesn't fully pass: **107 tests pass and 3 fail.** The 3 failures come from a real bug in the library, not from mistakes in the tests, so I left them failing rather than weakening them.\n\n**The bug:** RFC 6901 says an array index is either `0` or a number with no leading zero (`%x30 / ( %x31-39 *(%x30-39) )`). The library checks indices with the pattern `[0-9]+$` at `jsonpointer.py:155`, so it accepts `01`, `00` and `007`. For example, `resolve_pointer(list(range(10)), \"/01\")` returns `1` when it should raise `JsonPointerException`. The comment right above that line says leading zeros must not be allowed, so the code doesn't do what it says. The failing tests are the three cases of `test_leading_zero_indices_rejected`.\n\n**What the suite covers:**\n- **RFC examples:** every example from section 5 of the spec, plus checking that the empty pointer returns the whole document itself.\n- **Resolving:** nested lookups; `%20` isn't treated as URL encoding; missing keys, out-of-range indices and invalid indices (`-1`, `+1`, `1.0`, spaces, empty) raise errors; defaults are returned on failure, including falsy defaults like `None`, `0` and `\"\"`; `-` means \"end of list\" for lists but is a normal key for dicts; numeric keys in dicts stay strings; lookups into strings or plain values fail; objects with their own `__getitem__` work; `VERBOSE_EXCEPTIONS` controls whether the document appears in error messages.\n- **Parsing:** pointers must start with `/`; bad escapes (`~`, `~2`, `~x`) are rejected; `~01` unescapes to `~1`, not `/`; escaping and unescaping round-trip.\n- **Pointer objects:** `path`, `str` and `repr` round-trip (including subclasses); equality and hashing; `\"\"` and `\"/\"` are different pointers.\n- **Building pointers:** `from_parts`, plus `join` and `/` with a string, a pointer or a list. Joining escapes special characters, leaves the original pointer unchanged, and raises on invalid suffixes.\n- **Containment:** `contains` and `in` compare whole parts, so `/ab` doesn't count as containing `/a`.\n- **Setting values:** changing in place vs. on a deep copy; setting the root; replacing a list item and appending with `-`; failures for out-of-range indices, strings, tuples, plain values and missing parent paths.\n- **Internal helpers:** `to_last`, `get_part`, `walk` and `pairwise`.\n\nIf you want the run to go green before the library is fixed, I can mark that one test as an expected failure (`xfail(strict=True)`). It will then start failing loudly once the bug is fixed, as a reminder to remove the marker.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 107,
+  "failed": 3,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [
+   "tests/test_agent.py::test_leading_zero_indices_rejected[01]",
+   "tests/test_agent.py::test_leading_zero_indices_rejected[00]",
+   "tests/test_agent.py::test_leading_zero_indices_rejected[007]"
+  ],
+  "collect_error": false,
+  "xfail_lines": []
+ },
+ "on_correct": {
+  "passed": 110,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

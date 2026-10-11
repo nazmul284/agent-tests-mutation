@@ -1,0 +1,17 @@
+{
+ "name": "claude-sonnet-isodate-plain-r1",
+ "agent": "claude",
+ "model": "claude-sonnet-5-5",
+ "key": "claude-sonnet",
+ "lib": "isodate",
+ "prompt": "plain",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 133.0,
+ "changed": [
+  "?? isodate/__pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 0.4967326,
+ "turns": 8
+}

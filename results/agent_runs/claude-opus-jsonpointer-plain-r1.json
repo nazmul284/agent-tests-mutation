@@ -1,0 +1,17 @@
+{
+ "name": "claude-opus-jsonpointer-plain-r1",
+ "agent": "claude",
+ "model": "claude-opus-5-5",
+ "key": "claude-opus",
+ "lib": "jsonpointer",
+ "prompt": "plain",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 92.3,
+ "changed": [
+  "?? __pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 0.40916920000000007,
+ "turns": 6
+}

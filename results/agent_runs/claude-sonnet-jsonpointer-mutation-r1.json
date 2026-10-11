@@ -1,0 +1,17 @@
+{
+ "name": "claude-sonnet-jsonpointer-mutation-r1",
+ "agent": "claude",
+ "model": "claude-sonnet-5-5",
+ "key": "claude-sonnet",
+ "lib": "jsonpointer",
+ "prompt": "mutation",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 67.0,
+ "changed": [
+  "?? __pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 0.2167316,
+ "turns": 5
+}

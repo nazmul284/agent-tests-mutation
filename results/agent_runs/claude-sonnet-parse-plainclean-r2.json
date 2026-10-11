@@ -1,0 +1,17 @@
+{
+ "name": "claude-sonnet-parse-plainclean-r2",
+ "agent": "claude",
+ "model": "claude-sonnet-5-5",
+ "key": "claude-sonnet",
+ "lib": "parse",
+ "prompt": "plainclean",
+ "rep": 2,
+ "rc": 0,
+ "wall_s": 115.4,
+ "changed": [
+  "?? parse/__pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 0.4088728,
+ "turns": 8
+}

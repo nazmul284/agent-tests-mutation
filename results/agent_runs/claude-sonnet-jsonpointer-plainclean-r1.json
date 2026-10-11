@@ -1,0 +1,17 @@
+{
+ "name": "claude-sonnet-jsonpointer-plainclean-r1",
+ "agent": "claude",
+ "model": "claude-sonnet-5-5",
+ "key": "claude-sonnet",
+ "lib": "jsonpointer",
+ "prompt": "plainclean",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 64.4,
+ "changed": [
+  "?? __pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 0.201641,
+ "turns": 4
+}

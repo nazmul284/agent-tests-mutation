@@ -1,0 +1,30 @@
+{
+ "name": "codex-sol-parse-case-r1",
+ "key": "codex-sol",
+ "bug": "parse-case",
+ "lib": "parse",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 83.2,
+ "final_message": "Created [tests/test_agent.py](<work>/bug_ws/codex-sol-parse-case-r1/tests/test_agent.py) with 42 tests covering:\n\n- Numeric, string, percentage, and datetime formats\n- Custom converters\n- Named, repeated, nested, and anonymous fields\n- Escaping and case sensitivity\n- Search, bounds, spans, and `findall`\n- Deferred result evaluation\n- Parser metadata and validation\n- Timezone behavior\n\nVerification: **42 passed in 0.04s** using the specified command. The library code was not modified.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 42,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": []
+ },
+ "on_correct": {
+  "passed": 42,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

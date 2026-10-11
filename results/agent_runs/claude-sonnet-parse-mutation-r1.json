@@ -1,0 +1,17 @@
+{
+ "name": "claude-sonnet-parse-mutation-r1",
+ "agent": "claude",
+ "model": "claude-sonnet-5-5",
+ "key": "claude-sonnet",
+ "lib": "parse",
+ "prompt": "mutation",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 228.8,
+ "changed": [
+  "?? parse/__pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 0.7770974,
+ "turns": 16
+}

@@ -1,0 +1,17 @@
+{
+ "name": "claude-sonnet-isodate-plainclean-r1",
+ "agent": "claude",
+ "model": "claude-sonnet-5-5",
+ "key": "claude-sonnet",
+ "lib": "isodate",
+ "prompt": "plainclean",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 156.0,
+ "changed": [
+  "?? isodate/__pycache__/",
+  "?? tests/"
+ ],
+ "cost_usd": 0.572843,
+ "turns": 9
+}

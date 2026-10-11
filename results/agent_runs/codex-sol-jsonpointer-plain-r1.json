@@ -1,0 +1,21 @@
+{
+ "name": "codex-sol-jsonpointer-plain-r1",
+ "agent": "codex",
+ "model": "gpt-5.6-sol",
+ "key": "codex-sol",
+ "lib": "jsonpointer",
+ "prompt": "plain",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 109.4,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 269418,
+  "cached_input_tokens": 251904,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 5590,
+  "reasoning_output_tokens": 291
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "name": "codex-sol-isodate-mutation-r2",
+ "agent": "codex",
+ "model": "gpt-5.6-sol",
+ "key": "codex-sol",
+ "lib": "isodate",
+ "prompt": "mutation",
+ "rep": 2,
+ "rc": 0,
+ "wall_s": 82.7,
+ "changed": [
+  "?? isodate/__pycache__/",
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 366932,
+  "cached_input_tokens": 336896,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 6326,
+  "reasoning_output_tokens": 275
+ }
+}

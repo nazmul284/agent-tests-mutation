@@ -1,0 +1,16 @@
+{
+ "name": "claude-opus-parse-mutation-r2",
+ "agent": "claude",
+ "model": "claude-opus-5-5",
+ "key": "claude-opus",
+ "lib": "parse",
+ "prompt": "mutation",
+ "rep": 2,
+ "rc": 0,
+ "wall_s": 981.3,
+ "changed": [
+  "?? tests/"
+ ],
+ "cost_usd": 1.5402724,
+ "turns": 17
+}

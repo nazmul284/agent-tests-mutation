@@ -1,0 +1,828 @@
+{
+ "grid": {
+  "jp-unescape": {
+   "human": "-",
+   "claude-opus": "XF",
+   "claude-sonnet": "FF",
+   "codex-astra": "X",
+   "codex-sol": "X"
+  },
+  "jp-leading-zero": {
+   "human": "F",
+   "claude-opus": "FF",
+   "claude-sonnet": "FF",
+   "codex-astra": "X",
+   "codex-sol": "-"
+  },
+  "iso-tz-sign": {
+   "human": "F",
+   "claude-opus": "FF",
+   "claude-sonnet": "FF",
+   "codex-astra": "X",
+   "codex-sol": "F"
+  },
+  "iso-ordinal": {
+   "human": "F",
+   "claude-opus": "FF",
+   "claude-sonnet": "FF",
+   "codex-astra": "X",
+   "codex-sol": "X"
+  },
+  "parse-case": {
+   "human": "F",
+   "claude-opus": "FF",
+   "claude-sonnet": "EX",
+   "codex-astra": "-",
+   "codex-sol": "-"
+  },
+  "parse-percent": {
+   "human": "F",
+   "claude-opus": "FX",
+   "claude-sonnet": "FX",
+   "codex-astra": "X",
+   "codex-sol": "X"
+  }
+ },
+ "runs": {
+  "claude-opus-iso-ordinal-r1": {
+   "key": "claude-opus",
+   "bug": "iso-ordinal",
+   "tests": 331,
+   "catches": [
+    "tests.test_agent::test_date_roundtrip[%Y%j]",
+    "tests.test_agent::test_date_roundtrip[%Y-%j]",
+    "tests.test_agent::test_datetime_isoformat[%Y%jT%H%M%S%z-1985102T101530+0400]",
+    "tests.test_agent::test_datetime_isoformat[%Y-%jT%H:%M:%S%Z-1985-102T10:15:30+04:00]",
+    "tests.test_agent::test_parse_date_basic_formats[1985-001-expected8]",
+    "tests.test_agent::test_parse_date_basic_formats[1985-102-expected6]",
+    "tests.test_agent::test_parse_date_basic_formats[1985-365-expected10]",
+    "tests.test_agent::test_parse_date_basic_formats[1985001-expected9]",
+    "tests.test_agent::test_parse_date_basic_formats[1985102-expected7]",
+    "tests.test_agent::test_parse_date_basic_formats[2000-060-expected11]",
+    "tests.test_agent::test_parse_date_basic_formats[2000-366-expected12]",
+    "tests.test_agent::test_parse_date_basic_formats[2001-060-expected13]",
+    "tests.test_agent::test_parse_date_expanded[+001985-102-6-expected5]",
+    "tests.test_agent::test_parse_date_expanded[+001985102-6-expected6]",
+    "tests.test_agent::test_parse_datetime[1985-102T10:15Z-expected3]",
+    "tests.test_agent::test_parse_datetime[1985102T1015Z-expected2]",
+    "tests.test_agent::test_parse_ordinal_date_matches_toordinal[100]",
+    "tests.test_agent::test_parse_ordinal_date_matches_toordinal[1]",
+    "tests.test_agent::test_parse_ordinal_date_matches_toordinal[200]",
+    "tests.test_agent::test_parse_ordinal_date_matches_toordinal[32]",
+    "tests.test_agent::test_parse_ordinal_date_matches_toordinal[365]",
+    "tests.test_agent::test_parse_ordinal_date_matches_toordinal[59]",
+    "tests.test_agent::test_parse_ordinal_date_matches_toordinal[60]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 23,
+   "source_modified": false
+  },
+  "claude-opus-iso-ordinal-r2": {
+   "key": "claude-opus",
+   "bug": "iso-ordinal",
+   "tests": 364,
+   "catches": [
+    "tests.test_agent::test_date_roundtrip[%Y%j]",
+    "tests.test_agent::test_date_roundtrip[%Y-%j]",
+    "tests.test_agent::test_datetime_ord_roundtrip",
+    "tests.test_agent::test_parse_date_expanded_six_digits[+001985-102-expected4]",
+    "tests.test_agent::test_parse_date_expanded_six_digits[+001985102-expected5]",
+    "tests.test_agent::test_parse_date_four_digit[1985-001-expected17]",
+    "tests.test_agent::test_parse_date_four_digit[1985-102-expected15]",
+    "tests.test_agent::test_parse_date_four_digit[1985-365-expected18]",
+    "tests.test_agent::test_parse_date_four_digit[1985102-expected16]",
+    "tests.test_agent::test_parse_date_four_digit[2000-060-expected20]",
+    "tests.test_agent::test_parse_date_four_digit[2000-366-expected19]",
+    "tests.test_agent::test_parse_datetime_naive[1985-102T23:50:30-expected4]",
+    "tests.test_agent::test_parse_datetime_naive[1985102T235030-expected3]",
+    "tests.test_agent::test_parse_ordinal_all_days_of_year"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 14,
+   "source_modified": false
+  },
+  "claude-opus-iso-tz-sign-r1": {
+   "key": "claude-opus",
+   "bug": "iso-tz-sign",
+   "tests": 331,
+   "catches": [
+    "tests.test_agent::test_build_tzinfo",
+    "tests.test_agent::test_datetime_roundtrip[1985-04-12T10:15:30+04:00-%Y-%m-%dT%H:%M:%S%Z]",
+    "tests.test_agent::test_datetime_roundtrip[1985-04-12T10:15:30-04:00-%Y-%m-%dT%H:%M:%S%Z]",
+    "tests.test_agent::test_datetime_roundtrip[1985-102T10:15:30+05:30-%Y-%jT%H:%M:%S%Z]",
+    "tests.test_agent::test_datetime_roundtrip[1985-W15-5T10:15:30-01:00-%Y-W%W-%wT%H:%M:%S%Z]",
+    "tests.test_agent::test_datetime_roundtrip[19850412T101530+0400-%Y%m%dT%H%M%S%z]",
+    "tests.test_agent::test_datetime_roundtrip[19850412T101530-1100-%Y%m%dT%H%M%S%z]",
+    "tests.test_agent::test_parse_datetime_matches_fromisoformat",
+    "tests.test_agent::test_parse_datetime_offsets_convert_to_utc[1985-04-12T01:00:00+05:30-utc3]",
+    "tests.test_agent::test_parse_datetime_offsets_convert_to_utc[1985-04-12T10:15:30+04:00-utc0]",
+    "tests.test_agent::test_parse_datetime_offsets_convert_to_utc[1985-04-12T10:15:30-04:00-utc1]",
+    "tests.test_agent::test_parse_datetime_offsets_convert_to_utc[1985-04-12T23:00:00-02-utc4]",
+    "tests.test_agent::test_parse_datetime_offsets_convert_to_utc[19850412T101530+0400-utc2]",
+    "tests.test_agent::test_parse_time_offsets[15-03:30-offset8]",
+    "tests.test_agent::test_parse_time_offsets[152746+05:30-offset6]",
+    "tests.test_agent::test_parse_time_offsets[15:27+05:45-offset7]",
+    "tests.test_agent::test_parse_time_offsets[15:27:46+01-offset2]",
+    "tests.test_agent::test_parse_time_offsets[15:27:46+0100-offset1]",
+    "tests.test_agent::test_parse_time_offsets[15:27:46+01:00-offset0]",
+    "tests.test_agent::test_parse_time_offsets[15:27:46-05-offset5]",
+    "tests.test_agent::test_parse_time_offsets[15:27:46-0500-offset4]",
+    "tests.test_agent::test_parse_time_offsets[15:27:46-05:00-offset3]",
+    "tests.test_agent::test_parse_tzinfo_matches_stdlib",
+    "tests.test_agent::test_parse_tzinfo_offsets[+01-offset2]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+0100-offset1]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+01:00-offset0]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+05:30-offset4]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+14:00-offset6]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-01:00-offset3]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-03:30-offset5]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-12-offset7]",
+    "tests.test_agent::test_time_roundtrip[232050+0100-%H%M%S%z]",
+    "tests.test_agent::test_time_roundtrip[232050-0800-%H%M%S%z]",
+    "tests.test_agent::test_time_roundtrip[23:20+02-%H:%M%h]",
+    "tests.test_agent::test_time_roundtrip[23:20:50+01:00-%H:%M:%S%Z]",
+    "tests.test_agent::test_time_roundtrip[23:20:50-05:30-%H:%M:%S%Z]",
+    "tests.test_agent::test_tz_roundtrip[+01:00]",
+    "tests.test_agent::test_tz_roundtrip[+05:30]",
+    "tests.test_agent::test_tz_roundtrip[+14:00]",
+    "tests.test_agent::test_tz_roundtrip[-01:00]",
+    "tests.test_agent::test_tz_roundtrip[-09:30]",
+    "tests.test_agent::test_tz_roundtrip[-12:00]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 42,
+   "source_modified": false
+  },
+  "claude-opus-iso-tz-sign-r2": {
+   "key": "claude-opus",
+   "bug": "iso-tz-sign",
+   "tests": 380,
+   "catches": [
+    "tests.test_agent::test_build_tzinfo",
+    "tests.test_agent::test_datetime_matches_stdlib",
+    "tests.test_agent::test_datetime_roundtrip[1985-04-12T10:15:30+04:00]",
+    "tests.test_agent::test_datetime_roundtrip[1985-04-12T10:15:30-04:00]",
+    "tests.test_agent::test_datetime_roundtrip[2000-02-29T00:00:00+05:30]",
+    "tests.test_agent::test_datetime_roundtrip[2000-02-29T23:59:59-11:45]",
+    "tests.test_agent::test_parse_datetime[1985-W15-5T10:15+04-expected5]",
+    "tests.test_agent::test_parse_datetime[1985-W15-5T10:15-0430-expected6]",
+    "tests.test_agent::test_parse_datetime[1985W155T1015+0400-expected4]",
+    "tests.test_agent::test_parse_time_with_tz[15+0100-expected_time14-expected_offset14]",
+    "tests.test_agent::test_parse_time_with_tz[1527+0100-expected_time13-expected_offset13]",
+    "tests.test_agent::test_parse_time_with_tz[152746+0100-expected_time4-expected_offset4]",
+    "tests.test_agent::test_parse_time_with_tz[152746-0500-expected_time7-expected_offset7]",
+    "tests.test_agent::test_parse_time_with_tz[15:27:46+01-expected_time6-expected_offset6]",
+    "tests.test_agent::test_parse_time_with_tz[15:27:46+01:00-expected_time5-expected_offset5]",
+    "tests.test_agent::test_parse_time_with_tz[15:27:46+05:30-expected_time10-expected_offset10]",
+    "tests.test_agent::test_parse_time_with_tz[15:27:46-03:30-expected_time11-expected_offset11]",
+    "tests.test_agent::test_parse_time_with_tz[15:27:46-05-expected_time9-expected_offset9]",
+    "tests.test_agent::test_parse_time_with_tz[15:27:46-05:00-expected_time8-expected_offset8]",
+    "tests.test_agent::test_parse_time_with_tz[15:27:46.5+01:00-expected_time12-expected_offset12]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+01-expected2]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+0100-expected1]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+01:00-expected0]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+05:30-expected6]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+14:00-expected10]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-01-expected5]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-0100-expected4]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-01:00-expected3]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-03:30-expected7]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-12:00-expected11]",
+    "tests.test_agent::test_time_tz_roundtrip[00:00:00+14:00]",
+    "tests.test_agent::test_time_tz_roundtrip[12:34:56-09:30]",
+    "tests.test_agent::test_time_tz_roundtrip[23:20:50+01:00]",
+    "tests.test_agent::test_time_tz_roundtrip[23:20:50-05:00]",
+    "tests.test_agent::test_tz_aware_comparison_uses_sign"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 35,
+   "source_modified": false
+  },
+  "claude-opus-jp-leading-zero-r1": {
+   "key": "claude-opus",
+   "bug": "jp-leading-zero",
+   "tests": 110,
+   "catches": [
+    "tests.test_agent::test_leading_zero_indices_rejected[007]",
+    "tests.test_agent::test_leading_zero_indices_rejected[00]",
+    "tests.test_agent::test_leading_zero_indices_rejected[01]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 3,
+   "source_modified": false
+  },
+  "claude-opus-jp-leading-zero-r2": {
+   "key": "claude-opus",
+   "bug": "jp-leading-zero",
+   "tests": 146,
+   "catches": [
+    "tests.test_agent::test_invalid_array_index[007]",
+    "tests.test_agent::test_invalid_array_index[00]",
+    "tests.test_agent::test_invalid_array_index[01]",
+    "tests.test_agent::test_set_list_invalid_index[01]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 4,
+   "source_modified": false
+  },
+  "claude-opus-jp-unescape-r1": {
+   "key": "claude-opus",
+   "bug": "jp-unescape",
+   "tests": 192,
+   "catches": [
+    "tests.test_agent.TestEscape::test_round_trip[a~1b/c~0]",
+    "tests.test_agent.TestEscape::test_round_trip[~1]",
+    "tests.test_agent.TestEscape::test_unescape_tilde_zero_one_is_literal_tilde_one",
+    "tests.test_agent.TestRepresentation::test_from_parts_tricky",
+    "tests.test_agent.TestRepresentation::test_path_round_trip[/~01]",
+    "tests.test_agent.TestResolve::test_tilde_zero_one_key"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 1,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "claude-opus-jp-unescape-r2": {
+   "key": "claude-opus",
+   "bug": "jp-unescape",
+   "tests": 168,
+   "catches": [
+    "tests.test_agent.TestConstruction::test_from_parts_tricky",
+    "tests.test_agent.TestConstruction::test_join_escaped",
+    "tests.test_agent.TestEscaping::test_roundtrip[/~0~1/]",
+    "tests.test_agent.TestEscaping::test_roundtrip[~1]",
+    "tests.test_agent.TestEscaping::test_unescape[~01-~1]",
+    "tests.test_agent.TestParsing::test_tilde01_part",
+    "tests.test_agent.TestRepresentation::test_path_roundtrip[/~01]",
+    "tests.test_agent.TestResolve::test_tilde01_key",
+    "tests.test_agent.TestSet::test_set_escaped_key"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 9,
+   "source_modified": false
+  },
+  "claude-opus-parse-case-r1": {
+   "key": "claude-opus",
+   "bug": "parse-case",
+   "tests": 156,
+   "catches": [
+    "tests.test_agent.TestCaseSensitivity::test_parse_default_is_case_insensitive"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 1,
+   "source_modified": false
+  },
+  "claude-opus-parse-case-r2": {
+   "key": "claude-opus",
+   "bug": "parse-case",
+   "tests": 283,
+   "catches": [
+    "tests.test_agent.TestCaseSensitivity::test_parse_case_insensitive_by_default",
+    "tests.test_agent.TestCaseSensitivity::test_parse_default_matches_compile_default"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 2,
+   "source_modified": false
+  },
+  "claude-opus-parse-percent-r1": {
+   "key": "claude-opus",
+   "bug": "parse-percent",
+   "tests": 140,
+   "catches": [
+    "tests.test_agent::test_percentage_function_directly",
+    "tests.test_agent::test_percentage_type[-25%--0.25]",
+    "tests.test_agent::test_percentage_type[100%-1.0]",
+    "tests.test_agent::test_percentage_type[12.5%-0.125]",
+    "tests.test_agent::test_percentage_type[200%-2.0]",
+    "tests.test_agent::test_percentage_type[50%-0.5]",
+    "tests.test_agent::test_percentage_with_following_field"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 7,
+   "source_modified": false
+  },
+  "claude-opus-parse-percent-r2": {
+   "key": "claude-opus",
+   "bug": "parse-percent",
+   "tests": 261,
+   "catches": [
+    "tests.test_agent::test_percentage_followed_by_field",
+    "tests.test_agent::test_percentage_function_direct",
+    "tests.test_agent::test_percentage_type[-25%--0.25]",
+    "tests.test_agent::test_percentage_type[100%-1.0]",
+    "tests.test_agent::test_percentage_type[12.5%-0.125]",
+    "tests.test_agent::test_percentage_type[200%-2.0]",
+    "tests.test_agent::test_percentage_type[50%-0.5]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 1,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "claude-sonnet-iso-ordinal-r1": {
+   "key": "claude-sonnet",
+   "bug": "iso-ordinal",
+   "tests": 132,
+   "catches": [
+    "tests.test_agent::test_ordinal_first_and_last_day_every_year",
+    "tests.test_agent::test_parse_date[1985-102-expected10]",
+    "tests.test_agent::test_parse_date[1985102-expected11]",
+    "tests.test_agent::test_parse_date[2003-060-expected7]",
+    "tests.test_agent::test_parse_date[2003-365-expected9]",
+    "tests.test_agent::test_parse_date[2004-001-expected4]",
+    "tests.test_agent::test_parse_date[2004-060-expected6]",
+    "tests.test_agent::test_parse_date[2004-366-expected8]",
+    "tests.test_agent::test_parse_date[2004001-expected5]",
+    "tests.test_agent::test_parse_date_expanded",
+    "tests.test_agent::test_parse_datetime"
+   ],
+   "enshrines": [],
+   "broken": [
+    "tests.test_agent::test_date_roundtrip_all_formats"
+   ],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 12,
+   "source_modified": false
+  },
+  "claude-sonnet-iso-ordinal-r2": {
+   "key": "claude-sonnet",
+   "bug": "iso-ordinal",
+   "tests": 162,
+   "catches": [
+    "tests.test_agent::test_date_format_roundtrip_all_formats",
+    "tests.test_agent::test_datetime_roundtrip",
+    "tests.test_agent::test_parse_date_expanded",
+    "tests.test_agent::test_parse_date_ordinal[2023-001-expected0]",
+    "tests.test_agent::test_parse_date_ordinal[2023-032-expected2]",
+    "tests.test_agent::test_parse_date_ordinal[2023-137-expected7]",
+    "tests.test_agent::test_parse_date_ordinal[2023-365-expected3]",
+    "tests.test_agent::test_parse_date_ordinal[2023001-expected1]",
+    "tests.test_agent::test_parse_date_ordinal[2024-060-expected4]",
+    "tests.test_agent::test_parse_date_ordinal[2024-366-expected5]",
+    "tests.test_agent::test_parse_date_ordinal[2024366-expected6]",
+    "tests.test_agent::test_parse_date_ordinal_matches_stdlib_for_many_dates",
+    "tests.test_agent::test_parse_datetime"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 13,
+   "source_modified": false
+  },
+  "claude-sonnet-iso-tz-sign-r1": {
+   "key": "claude-sonnet",
+   "bug": "iso-tz-sign",
+   "tests": 163,
+   "catches": [
+    "tests.test_agent::test_build_tzinfo_signs",
+    "tests.test_agent::test_datetime_roundtrip_with_tz",
+    "tests.test_agent::test_parse_datetime_tz",
+    "tests.test_agent::test_parse_time_tz[20-07-expected6]",
+    "tests.test_agent::test_parse_time_tz[202312+0530-expected3]",
+    "tests.test_agent::test_parse_time_tz[202312-0530-expected4]",
+    "tests.test_agent::test_parse_time_tz[20:23+02-expected5]",
+    "tests.test_agent::test_parse_time_tz[20:23:12+01:00-expected1]",
+    "tests.test_agent::test_parse_time_tz[20:23:12-01:00-expected2]",
+    "tests.test_agent::test_parse_time_tz[20:23:12.5+05:00-expected7]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+05-expected4]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+0530-expected2]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+05:00-expected0]",
+    "tests.test_agent::test_parse_tzinfo_offsets[+05:45-expected7]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-03:30-expected8]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-0530-expected3]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-05:00-expected1]",
+    "tests.test_agent::test_parse_tzinfo_offsets[-11-expected5]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 18,
+   "source_modified": false
+  },
+  "claude-sonnet-iso-tz-sign-r2": {
+   "key": "claude-sonnet",
+   "bug": "iso-tz-sign",
+   "tests": 305,
+   "catches": [
+    "tests.test_agent.TestDatetime::test_parse_tz",
+    "tests.test_agent.TestDatetime::test_roundtrip[2012-03-04T20:23:45+05:30]",
+    "tests.test_agent.TestDatetime::test_roundtrip[2012-03-04T20:23:45-08:00]",
+    "tests.test_agent.TestParseTime::test_offset_converts_correctly",
+    "tests.test_agent.TestParseTime::test_offsets[20-08-expected5]",
+    "tests.test_agent.TestParseTime::test_offsets[202345+0530-expected2]",
+    "tests.test_agent.TestParseTime::test_offsets[202345-0530-expected3]",
+    "tests.test_agent.TestParseTime::test_offsets[20:23+02-expected4]",
+    "tests.test_agent.TestParseTime::test_offsets[20:23:45+01:00-expected0]",
+    "tests.test_agent.TestParseTime::test_offsets[20:23:45-01:00-expected1]",
+    "tests.test_agent.TestTimeFormat::test_roundtrip[20:23:45+05:30]",
+    "tests.test_agent.TestTimeFormat::test_roundtrip[20:23:45-03:00]",
+    "tests.test_agent.TestTzFormatting::test_roundtrip[+00:45]",
+    "tests.test_agent.TestTzFormatting::test_roundtrip[+05:30]",
+    "tests.test_agent.TestTzFormatting::test_roundtrip[-05:30]",
+    "tests.test_agent.TestTzFormatting::test_roundtrip[-11:00]",
+    "tests.test_agent.TestTzParsing::test_build_tzinfo",
+    "tests.test_agent.TestTzParsing::test_offsets[+01:00-expected0]",
+    "tests.test_agent.TestTzParsing::test_offsets[+02-expected6]",
+    "tests.test_agent.TestTzParsing::test_offsets[+0530-expected2]",
+    "tests.test_agent.TestTzParsing::test_offsets[+05:30-expected4]",
+    "tests.test_agent.TestTzParsing::test_offsets[-01:00-expected1]",
+    "tests.test_agent.TestTzParsing::test_offsets[-0530-expected3]",
+    "tests.test_agent.TestTzParsing::test_offsets[-05:30-expected5]",
+    "tests.test_agent.TestTzParsing::test_offsets[-11-expected7]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 25,
+   "source_modified": false
+  },
+  "claude-sonnet-jp-leading-zero-r1": {
+   "key": "claude-sonnet",
+   "bug": "jp-leading-zero",
+   "tests": 77,
+   "catches": [
+    "tests.test_agent::test_get_part_leading_zero",
+    "tests.test_agent::test_invalid_array_index[000]",
+    "tests.test_agent::test_invalid_array_index[007]",
+    "tests.test_agent::test_invalid_array_index[00]",
+    "tests.test_agent::test_invalid_array_index[01]",
+    "tests.test_agent::test_leading_zero_index_on_set"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 6,
+   "source_modified": false
+  },
+  "claude-sonnet-jp-leading-zero-r2": {
+   "key": "claude-sonnet",
+   "bug": "jp-leading-zero",
+   "tests": 86,
+   "catches": [
+    "tests.test_agent::test_leading_zero_index_rejected[001]",
+    "tests.test_agent::test_leading_zero_index_rejected[00]",
+    "tests.test_agent::test_leading_zero_index_rejected[012]",
+    "tests.test_agent::test_leading_zero_index_rejected[01]",
+    "tests.test_agent::test_leading_zero_index_rejected_on_set"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 5,
+   "source_modified": false
+  },
+  "claude-sonnet-jp-unescape-r1": {
+   "key": "claude-sonnet",
+   "bug": "jp-unescape",
+   "tests": 107,
+   "catches": [
+    "tests.test_agent::test_eq_and_hash",
+    "tests.test_agent::test_escape_unescape_roundtrip[//~~1]",
+    "tests.test_agent::test_escape_unescape_roundtrip[~0~1~01~10]",
+    "tests.test_agent::test_escape_unescape_roundtrip[~10]",
+    "tests.test_agent::test_escape_unescape_roundtrip[~1]",
+    "tests.test_agent::test_from_parts",
+    "tests.test_agent::test_from_parts_roundtrip_resolve",
+    "tests.test_agent::test_path_roundtrip[/~01]",
+    "tests.test_agent::test_pointer_literal_tilde_one_key",
+    "tests.test_agent::test_unescape_tilde_one_literal"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 10,
+   "source_modified": false
+  },
+  "claude-sonnet-jp-unescape-r2": {
+   "key": "claude-sonnet",
+   "bug": "jp-unescape",
+   "tests": 102,
+   "catches": [
+    "tests.test_agent::test_eq_and_hash",
+    "tests.test_agent::test_escape_unescape_roundtrip[~/~0~1]",
+    "tests.test_agent::test_escape_unescape_roundtrip[~10]",
+    "tests.test_agent::test_escape_unescape_roundtrip[~1]",
+    "tests.test_agent::test_from_parts",
+    "tests.test_agent::test_join_escaped_parts",
+    "tests.test_agent::test_path_roundtrip[/~01]",
+    "tests.test_agent::test_pointer_with_tilde_zero_one_resolves_literal_key",
+    "tests.test_agent::test_set_escaped_key",
+    "tests.test_agent::test_unescape_order_tilde_one"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 10,
+   "source_modified": false
+  },
+  "claude-sonnet-parse-case-r1": {
+   "key": "claude-sonnet",
+   "bug": "parse-case",
+   "tests": 148,
+   "catches": [],
+   "enshrines": [
+    "tests.test_agent::test_parse_case_sensitive_default"
+   ],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "claude-sonnet-parse-case-r2": {
+   "key": "claude-sonnet",
+   "bug": "parse-case",
+   "tests": 82,
+   "catches": [
+    "tests.test_agent::test_parse_case_insensitive_default"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 1,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "claude-sonnet-parse-percent-r1": {
+   "key": "claude-sonnet",
+   "bug": "parse-percent",
+   "tests": 70,
+   "catches": [
+    "tests.test_agent::test_percentage"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 1,
+   "source_modified": false
+  },
+  "claude-sonnet-parse-percent-r2": {
+   "key": "claude-sonnet",
+   "bug": "parse-percent",
+   "tests": 92,
+   "catches": [
+    "tests.test_agent::test_percent_function_direct",
+    "tests.test_agent::test_percent_value"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 2,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-astra-iso-ordinal-r1": {
+   "key": "codex-astra",
+   "bug": "iso-ordinal",
+   "tests": 169,
+   "catches": [
+    "tests.test_agent::test_ordinal_dates[2023-365-expected3]",
+    "tests.test_agent::test_ordinal_dates[2024-001-expected0]",
+    "tests.test_agent::test_ordinal_dates[2024-366-expected2]",
+    "tests.test_agent::test_ordinal_dates[2024060-expected1]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 2,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-astra-iso-tz-sign-r1": {
+   "key": "codex-astra",
+   "bug": "iso-tz-sign",
+   "tests": 137,
+   "catches": [
+    "tests.test_agent::test_parsed_timezone_sign[datetime-+02-120]",
+    "tests.test_agent::test_parsed_timezone_sign[datetime-+0545-345]",
+    "tests.test_agent::test_parsed_timezone_sign[datetime-+05:30-330]",
+    "tests.test_agent::test_parsed_timezone_sign[datetime--0045--45]",
+    "tests.test_agent::test_parsed_timezone_sign[datetime--03:30--210]",
+    "tests.test_agent::test_parsed_timezone_sign[datetime--08--480]",
+    "tests.test_agent::test_parsed_timezone_sign[time-+02-120]",
+    "tests.test_agent::test_parsed_timezone_sign[time-+0545-345]",
+    "tests.test_agent::test_parsed_timezone_sign[time-+05:30-330]",
+    "tests.test_agent::test_parsed_timezone_sign[time--0045--45]",
+    "tests.test_agent::test_parsed_timezone_sign[time--03:30--210]",
+    "tests.test_agent::test_parsed_timezone_sign[time--08--480]",
+    "tests.test_agent::test_parsed_timezone_sign[zone-+02-120]",
+    "tests.test_agent::test_parsed_timezone_sign[zone-+0545-345]",
+    "tests.test_agent::test_parsed_timezone_sign[zone-+05:30-330]",
+    "tests.test_agent::test_parsed_timezone_sign[zone--0045--45]",
+    "tests.test_agent::test_parsed_timezone_sign[zone--03:30--210]",
+    "tests.test_agent::test_parsed_timezone_sign[zone--08--480]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 2,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-astra-jp-leading-zero-r1": {
+   "key": "codex-astra",
+   "bug": "jp-leading-zero",
+   "tests": 110,
+   "catches": [
+    "tests.test_agent::test_array_indices_reject_leading_zeros[resolve-000]",
+    "tests.test_agent::test_array_indices_reject_leading_zeros[resolve-00]",
+    "tests.test_agent::test_array_indices_reject_leading_zeros[resolve-01]",
+    "tests.test_agent::test_array_indices_reject_leading_zeros[set-000]",
+    "tests.test_agent::test_array_indices_reject_leading_zeros[set-00]",
+    "tests.test_agent::test_array_indices_reject_leading_zeros[set-01]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 1,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-astra-jp-unescape-r1": {
+   "key": "codex-astra",
+   "bug": "jp-unescape",
+   "tests": 94,
+   "catches": [
+    "tests.test_agent::test_escaped_tilde_followed_by_one_is_not_a_slash"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 1,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-astra-parse-case-r1": {
+   "key": "codex-astra",
+   "bug": "parse-case",
+   "tests": 110,
+   "catches": [],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-astra-parse-percent-r1": {
+   "key": "codex-astra",
+   "bug": "parse-percent",
+   "tests": 142,
+   "catches": [
+    "tests.test_agent::test_percentage_format_roundtrip[-0.5]",
+    "tests.test_agent::test_percentage_format_roundtrip[0.125]",
+    "tests.test_agent::test_percentage_format_roundtrip[1.0]"
+   ],
+   "enshrines": [],
+   "broken": [
+    "tests.test_agent::test_numeric_sign_alignment_with_literal_star_fill"
+   ],
+   "xfail_mentions": 2,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-sol-iso-ordinal-r1": {
+   "key": "codex-sol",
+   "bug": "iso-ordinal",
+   "tests": 36,
+   "catches": [
+    "tests.test_agent::test_parse_date_ordinal_day_is_one_based[2023-365-expected3]",
+    "tests.test_agent::test_parse_date_ordinal_day_is_one_based[2024-001-expected0]",
+    "tests.test_agent::test_parse_date_ordinal_day_is_one_based[2024-060-expected2]",
+    "tests.test_agent::test_parse_date_ordinal_day_is_one_based[2024001-expected1]"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 1,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-sol-iso-tz-sign-r1": {
+   "key": "codex-sol",
+   "bug": "iso-tz-sign",
+   "tests": 42,
+   "catches": [
+    "tests.test_agent::test_aware_datetime_default_format_round_trips[value0]",
+    "tests.test_agent::test_aware_datetime_default_format_round_trips[value1]",
+    "tests.test_agent::test_parse_tzinfo_preserves_iso_offset_direction[+05-offset2]",
+    "tests.test_agent::test_parse_tzinfo_preserves_iso_offset_direction[+0530-offset1]",
+    "tests.test_agent::test_parse_tzinfo_preserves_iso_offset_direction[+05:30-offset0]",
+    "tests.test_agent::test_parse_tzinfo_preserves_iso_offset_direction[-03-offset5]",
+    "tests.test_agent::test_parse_tzinfo_preserves_iso_offset_direction[-0330-offset4]",
+    "tests.test_agent::test_parse_tzinfo_preserves_iso_offset_direction[-03:30-offset3]",
+    "tests.test_agent::test_timezone_direction_is_retained_in_time_and_datetime_parsing"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 9,
+   "source_modified": false
+  },
+  "codex-sol-jp-leading-zero-r1": {
+   "key": "codex-sol",
+   "bug": "jp-leading-zero",
+   "tests": 44,
+   "catches": [],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-sol-jp-unescape-r1": {
+   "key": "codex-sol",
+   "bug": "jp-unescape",
+   "tests": 46,
+   "catches": [
+    "tests.test_agent::test_unescape_does_not_process_an_escape_twice"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 1,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-sol-parse-case-r1": {
+   "key": "codex-sol",
+   "bug": "parse-case",
+   "tests": 42,
+   "catches": [],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 0,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  },
+  "codex-sol-parse-percent-r1": {
+   "key": "codex-sol",
+   "bug": "parse-percent",
+   "tests": 29,
+   "catches": [
+    "tests.test_agent::test_percentage_is_converted_to_fraction"
+   ],
+   "enshrines": [],
+   "broken": [],
+   "xfail_mentions": 1,
+   "left_failing_on_buggy": 0,
+   "source_modified": false
+  }
+ },
+ "bugs": {
+  "jp-unescape": {
+   "lib": "jsonpointer",
+   "file": "jsonpointer.py",
+   "correct": "return s.replace('~1', '/').replace('~0', '~')",
+   "planted": "return s.replace('~0', '~').replace('~1', '/')",
+   "why": "RFC 6901 s.4: decode ~1 before ~0, so '~01' must become '~1', not '/'"
+  },
+  "jp-leading-zero": {
+   "lib": "jsonpointer",
+   "file": "jsonpointer.py",
+   "correct": "_RE_ARRAY_INDEX = re.compile('0|[1-9][0-9]*$')",
+   "planted": "_RE_ARRAY_INDEX = re.compile('[0-9]+$')",
+   "why": "RFC 6901 s.4: array indexes with leading zeros are not allowed"
+  },
+  "iso-tz-sign": {
+   "lib": "isodate",
+   "file": "isodate/isotzinfo.py",
+   "correct": "tzsignum = ((tzsign == \"-\") and -1) or 1",
+   "planted": "tzsignum = ((tzsign == \"+\") and -1) or 1",
+   "why": "ISO 8601: +05:00 is five hours ahead of UTC"
+  },
+  "iso-ordinal": {
+   "lib": "isodate",
+   "file": "isodate/isodates.py",
+   "correct": "return ret + timedelta(days=int(groups[\"day\"]) - 1)",
+   "planted": "return ret + timedelta(days=int(groups[\"day\"]))",
+   "why": "ISO 8601 ordinal dates: 2024-001 is 1 January"
+  },
+  "parse-case": {
+   "lib": "parse",
+   "file": "parse/__init__.py",
+   "correct": "def parse(format, string, extra_types=None, evaluate_result=True, case_sensitive=False):",
+   "planted": "def parse(format, string, extra_types=None, evaluate_result=True, case_sensitive=True):",
+   "why": "parse() docstring: matching is case-insensitive by default"
+  },
+  "parse-percent": {
+   "lib": "parse",
+   "file": "parse/__init__.py",
+   "correct": "return float(string[:-1]) / 100.0",
+   "planted": "return float(string[:-1]) / 10.0",
+   "why": "{:%} parses a percentage: '50%' is 0.5"
+  }
+ }
+}

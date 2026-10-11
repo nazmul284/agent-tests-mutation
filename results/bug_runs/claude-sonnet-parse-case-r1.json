@@ -1,0 +1,32 @@
+{
+ "name": "claude-sonnet-parse-case-r1",
+ "key": "claude-sonnet",
+ "bug": "parse-case",
+ "lib": "parse",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 133.9,
+ "final_message": "I wrote `tests/test_agent.py` with 148 tests, and they all pass. I didn't change the library.\n\nThe suite covers:\n- Fixed, named, nested and repeated fields, escaped braces, regex-special characters, case sensitivity, spans, and the result and parser reprs.\n- Integer types `d`, `b`, `o`, `x`, `X`, `n` (base prefixes, signs, grouping, width) and fill/alignment/zero-padding.\n- Float types `f`, `F`, `e`, `E`, `g`, `G` (including `.0f`, `nan`/`inf`, negatives and padding), plus `%`, `w`, `W`, `s`, `S`, `D` and `l`.\n- Custom types through `extra_types` and `with_pattern`, including `regex_group_count` and the group-index bookkeeping for fields that follow them.\n- `search`, `findall` and `Parser` reuse, with `pos`, `endpos` and `evaluate_result=False`.\n- strptime-style date formats and every parse-specific date type (`ti`, `tg`, `ta`, `te`, `th`, `tc`, `tt`, `ts`), including AM/PM, timezone and microsecond handling, and group offsets for fields that follow them.\n- Direct tests of `extract_format`, `date_convert`, `FixedTzOffset` and `int_convert`.\n\nThe first run had 8 failures. All of them were mistakes in my expectations, not library bugs, and I corrected the tests:\n- Dotted names stay as flat keys like `\"a.b\"`; only bracket names nest.\n- A width on a plain string field is a minimum length, so padding is not stripped.\n- `{:s}` matches whitespace.\n- `{:ts}` needs trailing whitespace after the day.\n- I had miscounted a span position.\n\nI found no library bugs. Because the tests were adjusted until they matched the current behaviour, a bug that behaves plausibly could still be baked into them.\n\nI also removed three assertions that couldn't fail and replaced one with real checks. The run shows one `DeprecationWarning`, from `strptime` parsing a date with no year.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 148,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": []
+ },
+ "on_correct": {
+  "passed": 147,
+  "failed": 1,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [
+   "tests/test_agent.py::test_parse_case_sensitive_default"
+  ],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

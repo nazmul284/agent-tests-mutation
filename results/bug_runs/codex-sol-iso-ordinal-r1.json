@@ -1,0 +1,40 @@
+{
+ "name": "codex-sol-iso-ordinal-r1",
+ "key": "codex-sol",
+ "bug": "iso-ordinal",
+ "lib": "isodate",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 91.8,
+ "final_message": "Created [tests/test_agent.py](<work>/bug_ws/codex-sol-iso-ordinal-r1/tests/test_agent.py) with 36 tests covering dates, times, timezones, datetimes, durations, arithmetic, formatting, and invalid inputs.\n\nExact requested command result:\n\n```text\n32 passed, 4 xfailed in 0.08s\n```\n\nThe four expected failures document an existing ordinal-date off-by-one bug: `2024-001` parses as January 2. They are marked `xfail` because library modification was prohibited. No library code was changed.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 32,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 4,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": [
+   "XFAIL tests/test_agent.py::test_parse_date_ordinal_day_is_one_based[2024-001-expected0] - parse_date currently adds the one-based ordinal directly to January 1",
+   "XFAIL tests/test_agent.py::test_parse_date_ordinal_day_is_one_based[2024001-expected1] - parse_date currently adds the one-based ordinal directly to January 1",
+   "XFAIL tests/test_agent.py::test_parse_date_ordinal_day_is_one_based[2024-060-expected2] - parse_date currently adds the one-based ordinal directly to January 1",
+   "XFAIL tests/test_agent.py::test_parse_date_ordinal_day_is_one_based[2023-365-expected3] - parse_date currently adds the one-based ordinal directly to January 1"
+  ]
+ },
+ "on_correct": {
+  "passed": 36,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": [
+   "XPASS tests/test_agent.py::test_parse_date_ordinal_day_is_one_based[2024-001-expected0] - parse_date currently adds the one-based ordinal directly to January 1",
+   "XPASS tests/test_agent.py::test_parse_date_ordinal_day_is_one_based[2024001-expected1] - parse_date currently adds the one-based ordinal directly to January 1",
+   "XPASS tests/test_agent.py::test_parse_date_ordinal_day_is_one_based[2024-060-expected2] - parse_date currently adds the one-based ordinal directly to January 1",
+   "XPASS tests/test_agent.py::test_parse_date_ordinal_day_is_one_based[2023-365-expected3] - parse_date currently adds the one-based ordinal directly to January 1"
+  ]
+ }
+}

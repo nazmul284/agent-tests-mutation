@@ -1,0 +1,30 @@
+{
+ "name": "codex-sol-jp-leading-zero-r1",
+ "key": "codex-sol",
+ "bug": "jp-leading-zero",
+ "lib": "jsonpointer",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 122.0,
+ "final_message": "Created [tests/test_agent.py](<work>/bug_ws/codex-sol-jp-leading-zero-r1/tests/test_agent.py) with 44 tests covering RFC examples, escaping, resolution, errors, defaults, list handling, mutation semantics, joins, containment, and custom indexables.\n\nExact requested command result:\n\n```text\n44 passed in 0.04s\n```\n\nNo library code was modified.",
+ "source_modified": false,
+ "source_diff": "",
+ "on_buggy": {
+  "passed": 44,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": []
+ },
+ "on_correct": {
+  "passed": 44,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "failed_ids": [],
+  "collect_error": false,
+  "xfail_lines": []
+ }
+}

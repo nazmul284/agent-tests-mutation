@@ -1,0 +1,66 @@
+=== T1
+Mutants killed (%), default prompt, mean of 2 runs per agent
+
+                      jsonpointer  isodate    parse  line cov
+--------------------  -----------  -------  -------  --------
+Maintainers' tests           70.5     72.5     88.2    94-96%
+Claude Sonnet 5.5            77.7     78.8     89.5    97-98%
+Claude Opus 5.5              81.2     78.9     92.3       98%
+Codex GPT-5.6-Sol            80.8     61.8     67.8    83-95%
+Codex GPT-6-Astra            77.7     73.3     87.0    93-98%
+Mutants per library           224     1326     1288
+
+=== T2
+Mutants killed (%) by prompt and setup, mean of 2 runs
+
+                        jsonpointer       isodate         parse
+                         A   B   C     A   B   C     A   B   C 
+--------------------   ------------  ------------  ------------
+Claude Sonnet 5.5       78  78  90    79  79  83    90  92  97 
+Claude Opus 5.5         81  94  95    79  82  90    92  94  98 
+Codex GPT-5.6-Sol       81  85  88    62  66  73    68  78* 82 
+Codex GPT-6-Astra       78  79  89    73  74* 84    87  88* 93 
+A  default prompt, no mutation-testing config in the repo
+B  default prompt, mutmut configured in pyproject.toml
+C  prompt says the suite will be judged by mutation testing
+*  one run (the second hit Codex's usage limit)
+
+=== T3
+Mutants killed (%), default prompt, under three definitions
+
+                         all  no msg    all  no msg no cache
+                         jsonpointer                 isodate
+--------------------   -----  ------  -----  ------ --------
+Maintainers' tests      70.5    81.6   72.5    73.8     82.4
+Claude Sonnet 5.5       77.7    90.0   78.8    80.2     89.4
+Claude Opus 5.5         81.2    92.7   78.9    80.4     89.8
+Codex GPT-5.6-Sol       80.8    90.0   61.8    62.7     70.3
+Codex GPT-6-Astra       77.7    90.3   73.3    74.7     83.4
+no msg: excluding mutants that only change an error message's text
+no cache: excluding regex-builder mutants hidden by isodate's cache
+
+=== T4
+Planted bugs: what each agent's suite did (one letter per run)
+
+                  maint.  Sonnet    Opus     Sol   Astra
+----------------  ------  ------  ------  ------  ------
+jp-unescape            -      FF      XF       X       X
+jp-leading-zero        F      FF      FF       -       X
+iso-tz-sign            F      FF      FF       F       X
+iso-ordinal            F      FF      FF       X       X
+parse-case             F      EX      FF       -       -
+parse-percent          F      FX      FX       X       X
+F  a test fails on the bug and the suite is left failing
+X  a test asserts the right behaviour, marked expected-to-fail
+E  a test asserts the buggy behaviour as correct
+-  no test notices the bug
+
+=== T5
+Cost and time per suite, default prompt (mean over 6 runs)
+
+                       minutes  tests  test lines    cost
+--------------------   -------  -----  ----------  ------
+Claude Sonnet 5.5          1.9    188         807   $0.41
+Claude Opus 5.5            3.0    317        1026   $0.81
+Codex GPT-5.6-Sol          1.4     43         212    plan
+Codex GPT-6-Astra          2.0    134         290    plan

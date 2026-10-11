@@ -1,0 +1,21 @@
+{
+ "name": "codex-sol-parse-mutation-r1",
+ "agent": "codex",
+ "model": "gpt-5.6-sol",
+ "key": "codex-sol",
+ "lib": "parse",
+ "prompt": "mutation",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 82.2,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 323988,
+  "cached_input_tokens": 296576,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 5054,
+  "reasoning_output_tokens": 302
+ }
+}

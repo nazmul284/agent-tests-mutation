@@ -1,0 +1,21 @@
+{
+ "name": "codex-astra-parse-plainclean-r1",
+ "agent": "codex",
+ "model": "gpt-6-astra",
+ "key": "codex-astra",
+ "lib": "parse",
+ "prompt": "plainclean",
+ "rep": 1,
+ "rc": 0,
+ "wall_s": 139.9,
+ "changed": [
+  "?? tests/"
+ ],
+ "usage": {
+  "input_tokens": 171571,
+  "cached_input_tokens": 149760,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 5266,
+  "reasoning_output_tokens": 83
+ }
+}
